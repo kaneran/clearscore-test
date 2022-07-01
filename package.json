@@ -1,0 +1,23 @@
+{
+  "name": "clearscore-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open",
+    "api" : "cypress run --spec \"cypress/e2e/tests/test.cy.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaneran/Clearscore-Test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaneran/Clearscore-Test/issues"
+  },
+  "homepage": "https://github.com/kaneran/Clearscore-Test#readme",
+  "devDependencies": {
+    "cypress": "^10.3.0"
+  }
+}
