@@ -7,18 +7,18 @@ describe('Clearscore test - ', () => {
 
   it('Unable to signup without email', () => {
     HomePage.signUp();
-    HomePage.verifySignUp('fail');
+    HomePage.verifySignUp();
   })
 
   it('Unable to signup with invalid email', () => {
     HomePage.enterEmailToSignUp('invalidemail');
     HomePage.signUp();
-    HomePage.verifySignUp('fail');
+    HomePage.verifySignUp();
   })
 
   it('Signup with valid email', () => {
     HomePage.enterEmailToSignUp('user@clearscore.com');
     HomePage.signUp();
-    HomePage.verifySignUp('success');
+    HomePage.verifySignUp(true);
   })
 })

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "cypress open",
-    "api" : "cypress run --spec \"cypress/e2e/tests/test.cy.js\""
+    "e2e:tests" : "cypress run --spec \"cypress/e2e/tests/*.cy.js\""
   },
   "repository": {
     "type": "git",

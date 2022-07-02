@@ -6,13 +6,13 @@ describe('Clearscore test - ', () => {
   })
 
   it('Verify cookie notification is dismissable', () => {
-    HomePage.verifyCookieNotificationVisibility('visible');
+    HomePage.verifyCookieNotificationVisibility(true);
     HomePage.verifyCookieNotificationDismissible();
   })
 
   it('Dismiss cookie notification', () => {
     HomePage.dimissCookieNotification();
-    HomePage.verifyCookieNotificationVisibility('hidden');
+    HomePage.verifyCookieNotificationVisibility();
     HomePage.verifyCookiesSet();
   })
 })

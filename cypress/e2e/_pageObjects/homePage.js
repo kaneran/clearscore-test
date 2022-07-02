@@ -6,8 +6,8 @@ class HomePage{
     get signUpEmailInput() {return cy.get('[data-qa="input"]');}
     get signUpButton() {return cy.get('form[name="prospectForm"] [data-qa="button"]')}
 
-    verifyCookieNotificationVisibility(visibility){
-        const assertion = visibility === 'visible' ? 'be.visible' : 'not.exist';
+    verifyCookieNotificationVisibility(isVisible = false){
+        const assertion = isVisible ? 'be.visible' : 'not.exist';
         this.cookieNotification.should(assertion);
     }
 
@@ -23,10 +23,10 @@ class HomePage{
         })
     }
 
-    verifySignUp(outcome){
-        const assertion = outcome === 'success' ? 'contain' : 'not.contain';
+    verifySignUp(isSuccessful = false){
+        const assertion = isSuccessful ? 'contain' : 'not.contain';
         cy.fixture('urls').then((fixture) => cy.url().should(assertion, fixture.appUrl));
-        if(outcome === 'success'){
+        if(isSuccessful){
             SignUpPage.verifyPageVisible();
         }
     }
