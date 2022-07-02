@@ -1,5 +1,4 @@
 /// <reference types="cypress" />
-
 import { verifyPostRequest } from "../utils/api";
 
 describe("Clearscore test - ", () => {
